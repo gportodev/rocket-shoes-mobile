@@ -22,7 +22,7 @@ import {
 
 import tenis from '../../assets/images/tenis.jpg';
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [state, setState] = useState({
     activeIndex: 0,
     products: [
@@ -71,7 +71,7 @@ export default function Home() {
         <ProductImage source={item.image} />
         <ProductTitle>{item.title}</ProductTitle>
         <ProductPrice>{item.price}</ProductPrice>
-        <AddButton>
+        <AddButton onPress={(index) => navigation.navigate('Cart')}>
           <ProductAmount>
             <MaterialIcons name="add-shopping-cart" size={24} color="#fff" />
             <ProductAmountText>0</ProductAmountText>
