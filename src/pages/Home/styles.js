@@ -8,7 +8,6 @@ import logo from '../../assets/images/logo.png';
 export const ContMain = styled.SafeAreaView`
   flex: 1;
   background: #191920;
-  /* background: #fff; */
   align-items: center;
 `;
 
