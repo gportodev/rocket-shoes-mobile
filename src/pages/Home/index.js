@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Carousel from 'react-native-snap-carousel';
 
-import { FontAwesome, AntDesign, MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import {
   ContMain,
