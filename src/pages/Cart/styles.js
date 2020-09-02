@@ -32,6 +32,13 @@ export const BasketContainer = styled.TouchableOpacity`
   justify-content: flex-end;
 `;
 
+export const ContanAux = styled.View`
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 15px;
+`;
+
 export const ItemCount = styled.Text`
   position: absolute;
   text-align: center;
@@ -48,16 +55,13 @@ export const ItemCount = styled.Text`
 `;
 
 export const ProductInfo = styled.View`
-  margin-bottom: 300;
-  background: #fff;
-  width: 60%;
-  height: 35%;
-  border-radius: 10;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const ProductImage = styled.Image`
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 `;
 export const ProductDetails = styled.View`
   flex: 1;

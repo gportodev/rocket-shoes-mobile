@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-native-snap-carousel';
 
 import { MaterialIcons } from '@expo/vector-icons';
+
+import api from '../../services/api';
 
 import {
   ContMain,
@@ -64,6 +65,18 @@ export default function Home({ navigation }) {
       },
     ],
   });
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    async function loadProducts() {
+      const response = await api.get('products');
+      setData({ data: response.data });
+
+      console.log({ data });
+    }
+
+    loadProducts();
+  }, []);
 
   function _renderItem({ item }) {
     return (
